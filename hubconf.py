@@ -9,8 +9,8 @@ import torchvision
 
 
 model_urls = {
-    'resnet50_1m': "https://cornell.box.com/shared/static/iewb4hlabndnxtkvkiojzxyk54y5uzxd.pth",
-    'resnet50_250m': "https://cornell.box.com/shared/static/b902w3tgd042stfocdxsf6nqv8egmbwn.pth",
+    "resnet50_1m": "https://cornell.box.com/shared/static/r36nd2o0w5ch6ujuaxj0mtasxaqg0l5t.pth",
+    "resnet50_250m": "https://cornell.box.com/shared/static/y210vs3iktungg7wrf72ibzl87jrojna.pth",
 }
 
 
