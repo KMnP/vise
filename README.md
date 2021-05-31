@@ -26,29 +26,56 @@ Cornell University, Facebook AI
 
 
 
-## 💬 Loading models with torch.hub
-
-Get the pretrained ResNet-50 models from VisE *in one line*!  
+## 💬 Loading pretrained models
 
 :exclamation:**NOTE**: This is a torchvision-like model (all the layers before the last global average-pooling layer.). Given a batch of image tensors with size ``(B, 3, 224, 224)``, the provided models produce spatial image features of shape ``(B, 2048, 7, 7)``, where ``B``  is the batch size.
 
-### VisE-250M (ResNet-50)
+#### 
 
-This model is pretrained with 250 million public image posts.
+### Loading models with torch.hub
+
+Get the pretrained ResNet-50 models from VisE *in one line*!  
+
+**VisE-250M (ResNet-50)**: this model is pretrained with 250 million public image posts.
 
 ```python
 import torch
 model = torch.hub.load("KMnP/vise", "resnet50_250m", pretrained=True)
 ```
 
-### VisE-1.2M (ResNet-50)
-
-This model is pretrained with 1.23 million public image posts.
+**VisE-1.2M (ResNet-50)**: This model is pretrained with 1.23 million public image posts.
 
 ```python
 import torch
 model = torch.hub.load("KMnP/vise", "resnet50_1m", pretrained=True)
 ```
+
+
+
+### Loading models manually
+
+|           | Arch      | Size    | Model                                                        |
+| --------- | --------- | ------- | ------------------------------------------------------------ |
+| VisE-250M | ResNet-50 | 94.3 MB | [download](https://obj.umiacs.umd.edu/publicmodels/vise_250m_rn50_ep10.pth) |
+| VisE-1.2M | ResNet-50 | 94.3 MB | [download](https://obj.umiacs.umd.edu/publicmodels/vise_1m_rn50_ep100.pth) |
+
+If you encounter any issues with ``torch.hub``, alternatively you can download the model checkpoints manually, and then following the script below.
+
+```python
+import torch
+import torchvision
+
+# Create a torchvision resnet50 with randomly initialized weights.
+model = torchvision.models.resnet50(pretrained=False)
+
+# Get the model before the global aver-pooling layer.
+model = torch.nn.Sequential(*list(model.children())[:-2])
+
+# load the pretrained model from a local path: <CHECKPOINT_PATH>:
+model.load_state_dict(torch.load(CHECKPOINT_PATH))
+```
+
+
 
 
 
