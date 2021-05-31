@@ -12,10 +12,15 @@ Cornell University, Facebook AI
 **arXiv** https://arxiv.org/abs/2104.07767
 
 
+<div align="center">
+  <img width="70%" alt="common supervisory signals" src="https://cornell.box.com/shared/static/b0q4m35knki0rk3x5hq6a5lxfjdqfszz.png">
+</div>
 
-<img src="images/teaser.png" alt="common supervisory signals" style="zoom:40%;" />
+<div align="center">
+  <img width="70%" alt="VisE as supervisory signals." src="https://cornell.box.com/shared/static/2gi7omb0ct4122ix5z1in0h0bc6pcc3v.gif">
+</div>
 
-<img src="images/teaser_small.gif" alt="vise teaser" style="zoom:100%;" />
+
 
 **VisE** is a pretraining approach which leverages **Vis**ual **E**ngagement clues as supervisory signals. Given the same image, visual engagement provide semantically and contextually richer information than conventional recognition and captioning tasks.  VisE transfers well to subjective downstream computer vision tasks like emotion recognition or political bias classification.
 
