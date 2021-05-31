@@ -9,16 +9,15 @@ Cornell University, Facebook AI
 </span>
 </h4>
 <hr>
-
 **arXiv** https://arxiv.org/abs/2104.07767
 
-**VisE** is a pretrianing approach which leverage **Vis**ual **E**ngagement clues as supervisory signals. Given the same image, visual engagement provide semantically and contextually richer information than conventional recognition and captioning tasks.  VisE transfers well to subjective downstream computer vision tasks like emotion recognition or political bias classification.
 
 
+<img src="images/teaser.png" alt="common supervisory signals" style="zoom:40%;" />
 
-<img src="images/teaser.png" alt="common supervisory signals" style="zoom:60%;" />
+<img src="images/teaser_small.gif" alt="vise teaser" style="zoom:100%;" />
 
-<img src="images/teaser.gif" alt="vise teaser" style="zoom:75%;" />
+**VisE** is a pretraining approach which leverages **Vis**ual **E**ngagement clues as supervisory signals. Given the same image, visual engagement provide semantically and contextually richer information than conventional recognition and captioning tasks.  VisE transfers well to subjective downstream computer vision tasks like emotion recognition or political bias classification.
 
 
 
@@ -28,7 +27,7 @@ Get the pretrained ResNet-50 models from VisE *in one line*!
 
 :exclamation:**NOTE**: This is a torchvision-like model (all the layers before the last global average-pooling layer.). Given a batch of image tensors with size ``(B, 3, 224, 224)``, the provided models produce spatial image features of shape ``(B, 2048, 7, 7)``, where ``B``  is the batch size.
 
-#### VisE-250M (ResNet-50)
+### VisE-250M (ResNet-50)
 
 This model is pretrained with 250 million public image posts.
 
@@ -37,7 +36,7 @@ import torch
 model = torch.hub.load("KMnP/vise", "resnet50_250m", pretrained=True)
 ```
 
-#### VisE-1.2M (ResNet-50)
+### VisE-1.2M (ResNet-50)
 
 This model is pretrained with 1.23 million public image posts.
 
@@ -63,9 +62,13 @@ If you find VisE useful in your research, please cite the following publication.
 }
 ```
 
+
+
 ## 💬 Acknowledgments
 
 We thank Marseille who was featured in the teaser photo. 
+
+
 
 ## 💬 License
 
