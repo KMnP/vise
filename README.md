@@ -9,15 +9,15 @@ Cornell University, Facebook AI
 </span>
 </h4>
 <hr>
-**arXiv** https://arxiv.org/abs/2104.07767
 
+**arXiv**: https://arxiv.org/abs/2104.07767
 
 <div align="center">
-  <img width="70%" alt="common supervisory signals" src="https://cornell.box.com/shared/static/b0q4m35knki0rk3x5hq6a5lxfjdqfszz.png">
+  <img width="70%" alt="common supervisory signals" src="images/teaser.png">
 </div>
 
 <div align="center">
-  <img width="70%" alt="VisE as supervisory signals." src="https://cornell.box.com/shared/static/2gi7omb0ct4122ix5z1in0h0bc6pcc3v.gif">
+  <img width="70%" alt="VisE as supervisory signals." src="images/teaser_small.gif">
 </div>
 
 
